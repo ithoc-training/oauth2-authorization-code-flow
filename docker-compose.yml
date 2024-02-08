@@ -1,0 +1,32 @@
+version: '3.4'
+services:
+  keycloak:
+    build: ./keycloak
+    image: olihock/keycloak:1.0.0
+    container_name: keycloak
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    ports:
+      - "18092:8080"
+    command:
+      - start-dev
+      - --import-realm
+    networks:
+      - network
+  resource-server:
+    build: ./resource-server
+    image: oauth2-authorization-code-flow-resource-server
+    container_name: oauth2-authorization-code-flow-resource-server
+    restart: always
+    ports:
+      - "18091:18091"
+    volumes:
+      - "${HOME}/.m2:/root/.m2"
+    networks:
+      - network
+    depends_on:
+      keycloak:
+        condition: service_started
+networks:
+  network:

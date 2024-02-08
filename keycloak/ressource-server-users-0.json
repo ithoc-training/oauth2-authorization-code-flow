@@ -1,0 +1,41 @@
+{
+  "realm" : "ressource-server",
+  "users" : [ {
+    "id" : "d2a31a76-424a-4ee1-af94-121006c3f3c7",
+    "createdTimestamp" : 1707414387491,
+    "username" : "service-account-oauth2",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "serviceAccountClientId" : "oauth2",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-ressource-server" ],
+    "clientRoles" : {
+      "oauth2" : [ "uma_protection" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "9a8778b4-c10e-43f2-a8d9-77d11b8b92af",
+    "createdTimestamp" : 1707414615125,
+    "username" : "web-user",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "credentials" : [ {
+      "id" : "b1bf0426-528a-4baa-a6a1-e2f8d9caf4a2",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1707414631843,
+      "secretData" : "{\"value\":\"wHUQIaA6swDNz4crzkprvKcZzUtKpJD4KITjuCp9esY=\",\"salt\":\"9lSA9hpXrLxp9xZqkjlBEw==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-ressource-server" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ]
+}
