@@ -3,7 +3,7 @@ import {useKeycloak} from "@react-keycloak/web";
 import {KeycloakProfile} from "keycloak-js";
 
 const Profile = () => {
-    const {keycloak, initialized} = useKeycloak();
+    const {keycloak} = useKeycloak();
 
     const [profile, setProfile] =
         useState<KeycloakProfile | null>(null);
@@ -18,13 +18,6 @@ const Profile = () => {
         }
     }, [keycloak, keycloak?.authenticated]);
 
-    if (!initialized) {
-        return <div>Loading...</div>;
-    }
-
-    if (!keycloak?.authenticated) {
-        return <div>Please log in to view your profile.</div>;
-    }
 
     return (
         <div>

@@ -1,0 +1,61 @@
+{
+  "realm" : "oauth2-framework",
+  "users" : [ {
+    "id" : "8e5a111c-8e04-4b11-b014-b78906a98103",
+    "createdTimestamp" : 1707388172975,
+    "username" : "service-account-f73-gen4-jfs",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "serviceAccountClientId" : "f73-gen4-jfs",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-oauth2-client-credentials-flow" ],
+    "clientRoles" : {
+      "f73-gen4-jfs" : [ "uma_protection" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "f0a11ef9-fc39-414d-a5f3-bde4fda8a4d9",
+    "createdTimestamp" : 1707049439304,
+    "username" : "service-account-oauth2-client-credentials-flow",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "serviceAccountClientId" : "oauth2-client-credentials-flow",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-oauth2-client-credentials-flow" ],
+    "clientRoles" : {
+      "oauth2-client-credentials-flow" : [ "uma_protection" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "d6d21337-c950-4397-8cb7-6b2fad7a0d44",
+    "createdTimestamp" : 1707422163177,
+    "username" : "web-user",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "Web",
+    "lastName" : "User",
+    "email" : "web.user@example.com",
+    "credentials" : [ {
+      "id" : "a9fe38f3-eb2d-4156-8be4-9eaaf8085af4",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1707423291614,
+      "secretData" : "{\"value\":\"vx8enLQqqKkfrMd42ajQ4hj6AfjkDEV4tWIVLit0H9o=\",\"salt\":\"5v6b0bYmkCjVbi92aeWHxw==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-oauth2-client-credentials-flow" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ]
+}

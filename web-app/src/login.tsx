@@ -8,6 +8,13 @@ const LoginButton = () => {
         return <div>Loading ...</div>;
     }
 
+    if (keycloak.authenticated) {
+        return (
+            <div>
+                <p>{keycloak.token}</p>
+            </div>
+        );
+    }
     /*
      * The token comes with the keycloak object when posting client ID and secret via the token endpoint.
      * Show the user's token and a logout button if the user is authenticated.

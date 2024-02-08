@@ -7,6 +7,7 @@ services:
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_FEATURES: scripts
     ports:
       - "18092:8080"
     command:
@@ -16,17 +17,15 @@ services:
       - network
   resource-server:
     build: ./resource-server
-    image: oauth2-authorization-code-flow-resource-server
-    container_name: oauth2-authorization-code-flow-resource-server
-    restart: always
+    image: olihock/oauth2-resource-server:1.0.0
+    container_name: oauth2-resource-server
     ports:
       - "18091:18091"
+    environment:
+      ISSUER_URI: https://integ.dynv6.net/keycloak/realms/oauth2-framework
     volumes:
       - "${HOME}/.m2:/root/.m2"
     networks:
       - network
-    depends_on:
-      keycloak:
-        condition: service_started
 networks:
   network:
